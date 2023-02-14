@@ -23,8 +23,6 @@ class Instance {
 		await this.discord.login(token);
 	}
 
-	async cleanup() {}
-
 	loadCommands(path) {
 		for (const file of readDirRecursive(path)) {
 			const command = require(file);
